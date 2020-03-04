@@ -10,7 +10,9 @@ class App extends Component{
   constructor(props){
     super(props);
     this.state = {
-      recipes: []
+      recipes: [],
+      title: '',
+      description: ''
     }
   }
 
@@ -21,9 +23,14 @@ class App extends Component{
   }
 
   render() {
-    console.log(this.state)
+    console.log(this.state.recipes)
     return(
-      <h1>I am the Batch Maker App</h1>
+      <div>
+        <h1>I am the Batch Maker App</h1>
+        <ul>
+          {this.state.recipes.map(recipe => <li>{recipe.title}</li>)}
+        </ul>
+      </div>
       
 
     )
