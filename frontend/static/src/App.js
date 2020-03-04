@@ -28,7 +28,7 @@ class App extends Component{
       <div>
         <h1>I am the Batch Maker App</h1>
         <ul>
-          {this.state.recipes.map(recipe => <li>{recipe.title}</li>)}
+          {this.state.recipes.map(recipe => <li> <h2>{recipe.title}</h2> <p>{recipe.description}</p></li>)}
         </ul>
       </div>
       
