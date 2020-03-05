@@ -1,4 +1,6 @@
 import React,{Component} from 'react';
+import RecipesList from '../components/RecipesList.js'
+// import RecipeForm from '../components/RecipeForm.js'
 import './App.css';
 
 import axios from 'axios';
@@ -11,8 +13,7 @@ class App extends Component{
     super(props);
     this.state = {
       recipes: [],
-      title: '',
-      description: ''
+      
     }
   }
 
@@ -26,10 +27,8 @@ class App extends Component{
     console.log(this.state.recipes)
     return(
       <div>
-        <h1>I am the Batch Maker App</h1>
-        <ul>
-          {this.state.recipes.map(recipe => <li> <h2>{recipe.title}</h2> <p>{recipe.description}</p></li>)}
-        </ul>
+        <h1>This is the Home Page</h1>
+        <RecipesList recipes = {this.state.recipes}/>
       </div>
       
 
