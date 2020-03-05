@@ -99,7 +99,7 @@ class RecipeForm extends Component {
                         <input type="file" name="image" onChange={this.handleImageChange}/>
                     </label>
 
-                   <Form.Check type="checkbox" name="is_public" class="form-check-label" checked={this.state.is_public} onChange={this.handleChange} label="public" />
+                   <Form.Check type="checkbox" name="is_public" className="form-check-label" checked={this.state.is_public} onChange={this.handleChange} label="public" />
 
                    <div className="form-group col-6">
                         <label>Prep Time
